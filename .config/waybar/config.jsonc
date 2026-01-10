@@ -1,0 +1,124 @@
+{
+    //Makes life easier//
+    "reload_style_on_change": true,
+
+
+    //Makes the left and right border independent//
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
+
+    //Modifiable, probably//
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    /* "modules-center": [], */
+    "modules-right": [
+        "tray",
+        "power-profiles-daemon",
+        "network",
+        "battery",
+        "pulseaudio",
+        "backlight",
+        "clock"
+    ],
+    "custom/power": {
+        "format": "⭘ ",
+        "tooltip": false,
+        "on-click": "wlogout -b 5",
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "H",
+            "2": "I",
+            "3": "G",
+            "4": "H",
+            "5": "L",
+            "6": "A",
+            "7": "N",
+            "8": "D",
+            "9": "E",
+            "10": "R"
+        },
+        "cursor": true
+    
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10,
+        "cursor": true,
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "  Ethernet",
+        "format-linked": "  Linked (No IP)",
+        "format-disconnected": "  WiFi-less",
+        "tooltip": false,
+        "on-click": "kitty -e iwctl"
+    },
+    "battery": {
+        "states": {
+            "good": 85,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-alt": "{icon} {capacity}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "tooltip-format": "{time}",
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "  {volume}%",
+        "format-icons": {
+            "headphone": " ",
+            "headset": " ",
+            "default": [
+                " "
+            ],
+        },
+        "on-click": "pavucontrol",
+    },
+    "power-profiles-daemon": {
+        "format": "{icon} {profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "performance": "⚡",
+            "balanced": "⚖️",
+            "power-saver": "🔋"
+        }
+    },
+    "backlight": {
+        "format": "𖤓 {percent}%",
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<span size='15000'><tt>{calendar}</tt></span>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#F5C2E7'><b>{}</b></span>",
+                "weekdays": "<span color='#89B4FA'><b>{}</b></span>",
+                "days": "<span color='#CDD6F4'><b>{}</b></span>",
+                "today": "<span color='#F9E2AF'><b>{}</b></span>",
+            }
+        },
+        "on-click": "swaync-client -t -sw",
+    }
+}
