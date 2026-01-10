@@ -8,5 +8,5 @@ Also Fuck neovim, I use VSCode or VSCodium to edit my files, although i been lea
 
 EDIT: I have installed this on a VM to make sure what's missing and the nessecitys.
 
-Forgot to put the followings: otf-awesome-nerd-font, pavucontrol, oh-my-zsh!, powerlevel10k, zsh.
+Forgot to put the followings: otf-awesome-nerd-font, pavucontrol, oh-my-zsh!, powerlevel10k, zsh, ly (SSDM).
 This rice is mostly for laptops, and i forgot to take out my name when uploading the files so make sure you put your own directory for your own stuff.
